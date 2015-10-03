@@ -1,0 +1,307 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage"  EnableViewState="false"  %>
+
+<%@ Register assembly="Telerik.Web.UI" namespace="Telerik.Web.UI" tagprefix="telerik" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+
+    
+
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-latest.pack.js" type="text/javascript"></script>
+     <script src="js/JScript.js" type="text/javascript"></script>
+
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+    
+    <style type="text/css">
+        .style1ergerwe
+        {
+            width: 100%;
+            background-color: Transparent;
+        }
+
+        .style3ergerwe
+        {
+            background-color: Transparent;
+            font-weight: bold;
+        }
+        </style>
+    
+    
+</head>
+<body>
+
+    <form id="form1" runat="server">
+    <telerik:RadScriptManager ID="RadScriptManager1" Runat="server">
+    </telerik:RadScriptManager>
+
+<script>
+
+    function Get_Cookie(name) {
+
+        var start = document.cookie.indexOf(name + "=");
+        var len = start + name.length + 1;
+        if ((!start) &&
+(name != document.cookie.substring(0, name.length))) {
+            return null;
+        }
+        if (start == -1) return null;
+        var end = document.cookie.indexOf(";", len);
+        if (end == -1) end = document.cookie.length;
+        return unescape(document.cookie.substring(len, end));
+    }
+
+    var PageName = Get_Cookie('linkname');
+    var PageTitle = Get_Cookie('titlename');
+
+    if (PageTitle == '1') {
+        PageTitle = 'ارسال پیام کوتاه بصورت انبوه یا جزئی'
+    }
+    if (PageTitle == '2') {
+        PageTitle = 'پیام های دریافتی'
+    }
+
+    if (PageTitle == '3') {
+        PageTitle = 'پیام های ارسالی'
+    }
+
+    if (PageTitle == '4') {
+        PageTitle = 'نظرسنجی'
+    }
+
+    if (PageTitle == '5') {
+        PageTitle = 'مدیریت گیرندگان'
+    }
+    if (PageTitle == '6') {
+        PageTitle = 'مدیریت نمرات'
+    }
+
+    if (PageTitle == '7') {
+        PageTitle = 'تنظیمات'
+    }
+
+    $(document).ready(function() {
+        $('#' + PageName).css('background-color', 'black');
+        $('#TitleOfPageLoaded').text(PageTitle);
+    });
+</script>
+
+<script language="JavaScript">
+    function correctPNG() // correctly handle PNG transparency in Win IE 5.5 & 6.
+    {
+        var arVersion = navigator.appVersion.split("MSIE")
+        var version = parseFloat(arVersion[1])
+        if ((version >= 5.5) && (document.body.filters)) {
+            for (var i = 0; i < document.images.length; i++) {
+                var img = document.images[i]
+                var imgName = img.src.toUpperCase()
+                if (imgName.substring(imgName.length - 3, imgName.length) == "PNG") {
+                    var imgID = (img.id) ? "id='" + img.id + "' " : ""
+                    var imgClass = (img.className) ? "class='" + img.className + "' " : ""
+                    var imgTitle = (img.title) ? "title='" + img.title + "' " : "title='" + img.alt + "' "
+                    var imgStyle = "display:inline-block;" + img.style.cssText
+                    if (img.align == "left") imgStyle = "float:left;" + imgStyle
+                    if (img.align == "right") imgStyle = "float:right;" + imgStyle
+                    if (img.parentElement.href) imgStyle = "cursor:hand;" + imgStyle
+                    var strNewHTML = "<span " + imgID + imgClass + imgTitle
+            + " style=\"" + "width:" + img.width + "px; height:" + img.height + "px;" + imgStyle + ";"
+            + "filter:progid:DXImageTransform.Microsoft.AlphaImageLoader"
+            + "(src=\'" + img.src + "\', sizingMethod='scale');\"></span>"
+                    img.outerHTML = strNewHTML
+                    i = i - 1
+                }
+            }
+        }
+    }
+    window.attachEvent("onload", correctPNG);
+</script>
+
+    <div class="TopTitle">
+    <table>
+            <tr>
+                <td rowspan="2">
+                    <img alt="" src="images/Logo.png" style="width: 60px; height: 41px" /></td>
+                <td rowspan="2">
+                    <img alt="" src="images/ticalLogo.png" style="width: 139px; height: 35px" /></td>
+                <td rowspan="2">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;</td>
+                <td rowspan="2">
+                    &nbsp;</td>
+                <td style="font-weight:bold">
+                    <asp:Label ID="lbl_OwnerName" runat="server"></asp:Label>
+    به سیستم هوشمند پیام کوتاه تی کال خوش آمدید
+                </td>
+                <td style="font-weight:bold">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:LinkButton ID="lnk_signout" runat="server" onclick="lnk_signout_Click">خروج</asp:LinkButton>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td>
+                    برای زیباتر مشاهده کردن این وب سایت از نرم افزار Firefox استفاده نمایید</td>
+                <td>
+                <a href="http://download.mozilla.org/?product=firefox-3.6.8&os=win&lang=en-US">
+                    دانلود
+                    
+                     Firefox
+                    </a>
+                    </td>
+            </tr>
+        </table>
+    
+    </div>
+    
+    <div style="vertical-align: text-top; height: 100%;">
+     <table cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+                <td width="190px" class="RigtMenu">
+             <br />
+             <br />       
+        <table class="style1ergerwe" cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+                <td class="style3ergerwe" colspan="2">
+                    مدیریت پیام ها</td>
+                        <tr>
+                <td>
+                    &nbsp;</td>
+                        <td class="tdMenu" id="SendSMS">
+                            <asp:LinkButton ID="lnk_SendSMS" runat="server" onclick="RightMenuClicked">ارسال پیام</asp:LinkButton>
+                    &nbsp;</tr>
+                    <tr>
+                        <td>
+                            &nbsp;&nbsp;</td>
+                        <td class="tdMenu" id="RecievedSMS">
+                            <b>
+                            <asp:LinkButton ID="lnk_ReceievedMessageList" runat="server" CssClass="menuA" 
+                                onclick="RightMenuClicked">پیام های دریافتی</asp:LinkButton>
+                            </b> 
+                            &nbsp;<asp:Literal ID="Literal1" runat="server"></asp:Literal></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;</td>
+                        <td id="SentSMSList" class="tdMenu">
+                            <b>
+                            <asp:LinkButton ID="lnk_SentMessage" runat="server" CssClass="menuA" 
+                                onclick="RightMenuClicked">پیام های ارسالی</asp:LinkButton>
+                            </b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;</td>
+                        <td class="tdMenu" id="Openions">
+                            <b>
+                            <asp:LinkButton ID="lnk_Openions" runat="server" CssClass="menuA" 
+                                onclick="RightMenuClicked">نظرسنجی</asp:LinkButton>
+                            </b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <br />
+                            <b>ورود اطلاعات </b></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;</td>
+                        <td class="tdMenu" style="font-weight: bold" id="CustomersAdmin">
+                            <asp:LinkButton ID="lnk_RegisterCustomer" runat="server" 
+                                onclick="RightMenuClicked">مدیریت گیرندگان</asp:LinkButton>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;</td>
+                        <td class="tdMenu" style="font-weight: bold" id="ResultsAdmin">
+                            <asp:LinkButton ID="lnk_ResultsAdmin" runat="server" onclick="RightMenuClicked">مدیریت نمرات</asp:LinkButton>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;</td>
+                        <td class="tdMenu" style="font-weight: bold" id="Settings">
+                            <asp:LinkButton ID="lnk_RegisterCustomer0" runat="server" 
+                                onclick="RightMenuClicked">تنظیمات</asp:LinkButton>
+                        </td>
+                    </tr>
+                    </table>
+         
+         </td>
+                <td style="padding-left: 20px">
+                    <div class="MainPanel" style="background-color: #000000">
+                       <div id="TitleOfPageLoaded"></div>
+                       <br />
+                        
+                        <div class="Content">
+                        
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        
+                        
+                         
+                        </asp:ContentPlaceHolder>
+                       
+                        </div>
+                    
+                         <div>
+                             <table>
+                                 <tr>
+                                     <td>
+                                         <asp:Label ID="lbl_today" runat="server" Text="Label"></asp:Label>
+                                     </td>
+                                     <td>
+                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</td>
+                                     <td>
+                                         اعتبار شما                                         </td>
+                                        <td>
+                                        <div id="div_Current_Value">
+                                            <asp:Label ID="lbl_current_value" runat="server" Text="0"></asp:Label>
+                                         </div>
+                                        </td>
+                                        <td>
+                                            ریال&nbsp;می باشد&nbsp;</td>
+                                        <td>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            <asp:LinkButton ID="lnk_charge" runat="server" ForeColor="#FFFFCC" 
+                                                onclick="lnk_charge_Click">شارژ اعتبار</asp:LinkButton>
+                                            &nbsp;</td>
+                                        <td>
+                                            &nbsp;</td>
+                                        <td>
+                                            &nbsp;</td>
+                                        <td>
+                                            &nbsp;</td>
+                                        <td>
+                                            &nbsp;</td>
+                                    </tr>
+                                </table>
+                        </div>
+                    </div>
+                    </td>
+            </tr>
+        </table>    
+    </div>
+    <br />
+    <br />
+
+
+    
+    
+    
+
+    </form>
+    
+
+
+    
+    
+</body>
+</html>

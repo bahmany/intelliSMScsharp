@@ -1,0 +1,77 @@
+
+
+9/13/2011 4:54:45 Starting HP Driver Installation Utility.
+9/13/2011 4:54:45 HP Driver Installation Utility version: 2.6.2.9
+9/13/2011 4:54:45 Command Line Arguments:-path "\\192.168.0.123\f\temp\HPDIU\x64" -s recommended\hpdiu.settings 
+
+9/13/2011 4:54:45 Loading settings file: recommended\hpdiu.settings from \\192.168.0.123\f\temp\HPDIU\x64\recommended\hpdiu.settings
+9/13/2011 4:54:45 ----------------------------------------
+9/13/2011 4:54:45 Driver Location (<drivers_path>): ..\..\..\drivers\x64(64 bit - XP_S2003_Vista)\PCL6
+9/13/2011 4:54:45 Driver INF Filename (<driver_inf_file>):  hpc5035u.inf
+9/13/2011 4:54:46 WARNING: Unable to get Driver Type (<driver_type>) from settings file. Using default type Printer.
+9/13/2011 4:54:46 Converged IO Path (<dot4_path>): ..\..\..\drivers\x64(64 bit - XP_S2003_Vista)\PCL6
+9/13/2011 4:54:46 Converged IO Inf (<dot4_inf>): hpzius23.inf
+9/13/2011 4:54:46 Converged IO Inf (<dot4_inf>): hpzipa23.inf
+9/13/2011 4:54:46 Converged IO Inf (<dot4_inf>): hpzipr23.inf
+9/13/2011 4:54:46 HP Standard Port Monitor path (<port_monitor_path>):  ..\..\..\PortMonitor\x64
+9/13/2011 4:54:46 HP Standard Port Monitor msi name (<port_monitor_msi_name>):  HPTcpMon64.msi
+9/13/2011 4:54:46 Device Model Name (<device_model_name>): HP LaserJet M5035 MFP
+9/13/2011 4:54:46 Driver Model Name (<driver_model_name>): HP LaserJet M5035 MFP PCL 6
+9/13/2011 4:54:46 Device Vid Pid (<vid_pid>): vid_03f0&PID_7217
+9/13/2011 4:54:46 WARNING : Unable to retrieve device name  (<device_name>) for model (<model>) element from settings file. Driver model name (<driver_model_name>) will be used to name the device during installation.
+9/13/2011 4:54:46 Device Model Name (<device_model_name>): HP LaserJet M5025 MFP
+9/13/2011 4:54:46 Driver Model Name (<driver_model_name>): HP LaserJet M5025 MFP PCL 6
+9/13/2011 4:54:46 Device Vid Pid (<vid_pid>): vid_03f0&PID_7917
+9/13/2011 4:54:46 WARNING : Unable to retrieve device name  (<device_name>) for model (<model>) element from settings file. Driver model name (<driver_model_name>) will be used to name the device during installation.
+9/13/2011 4:54:46 Next Steps Application (<next_steps_application>):  ..\..\..\setup.exe
+9/13/2011 4:54:46 NextSteps Command Line Arguments (<next_steps_cmdline>):  NextSteps.htm
+9/13/2011 4:54:46 INFO : Unable to retrieve display name (<display_name>) from settings file.
+9/13/2011 4:54:46 Display Name (<display_name>): HP LaserJet M5025 MFP PCL 6, HP LaserJet M5035 MFP PCL 6
+9/13/2011 4:54:46 HPSIU Executable Path (<hpsiu_path>):  ..\..\HPSIU\x64\HPSIU.exe
+9/13/2011 4:54:46 ----------------------------------------
+
+9/13/2011 4:54:46 Driver to be Installed Version Timestamp : 08/31/2006
+9/13/2011 4:54:46 Driver to be Installed Version : 60.061.449.00
+9/13/2011 4:54:50 ERROR: Unable to open inf file:  GetLastError : 1241800,29/13/2011 4:54:50 File not open!
+9/13/2011 4:54:50 Drivers for this Printer is Identical to one already Installed.
+
+9/13/2011 4:56:34 HPDIUNetwork Command Line Arguments: -x 453 -y 163 -s recommended\hpdiu.settings  -lang ENWW  -title "HP LaserJet M5025 MFP PCL 6, HP LaserJet M5035 MFP PCL 6"  -ipaddressvalidation "192.168.0.3" -modelname "HP LaserJet M5035 MFP|HP LaserJet M5025 MFP"
+9/13/2011 4:56:34 csIPAddress is this 192.168.0.3
+9/13/2011 4:56:34 m_IPAddr is not IPv6 address so ipaddress(IPv4) : 192.168.0.3
+9/13/2011 4:56:34 INFO: IPv6 communication is available.
+
+9/13/2011 4:56:34 Valid IP Address Passed.
+
+9/13/2011 4:56:36 Return Value of Network 09/13/2011 4:56:36 Installing HP TCP/IP Port Monitor....Successful.
+9/13/2011 4:56:44 Network Installation using IP Address Started.
+
+9/13/2011 4:56:44 HPDIUNetwork Command Line Arguments: -x 453 -y 163 -s recommended\hpdiu.settings  -lang ENWW  -title "HP LaserJet M5025 MFP PCL 6, HP LaserJet M5035 MFP PCL 6"  -ipaddress "192.168.0.3" -modelname "HP LaserJet M5035 MFP|HP LaserJet M5025 MFP"
+9/13/2011 4:56:44 csIPAddress is this 192.168.0.3
+9/13/2011 4:56:44 m_IPAddr is not IPv6 address so ipaddress(IPv4) : 192.168.0.3
+9/13/2011 4:56:44 INFO: IPv6 communication is available.
+
+9/13/2011 4:56:44 Valid IP Address Passed.
+9/13/2011 4:56:47 192.168.0.3 Network IP Found.
+9/13/2011 4:56:47 Model Name Access Successful. Model Name Obtained from Printer :HP LaserJet M5035 MFP
+9/13/2011 4:56:47 Model Name Obtained from Settings File :HP LaserJet M5035 MFP|HP LaserJet M5025 MFP
+9/13/2011 4:56:47 Model Names Obtained from Printer and Settings File match each Other.
+9/13/2011 4:56:47 HPDIU_192.168.0.3 Valid Port Syntax.
+9/13/2011 4:56:49 Port Successfully Created
+9/13/2011 4:56:49 @@Entering WriteDataFile
+9/13/2011 4:56:49 Creating Empty Data File : C:\Users\ADMINI~1.TEH\AppData\Local\Temp\2\hpdiu2\HPDIU\hpdiu.data ... Successful.
+9/13/2011 4:56:49 @@Writing Data
+9/13/2011 4:56:49 @@Writing Elements
+9/13/2011 4:56:49 @@Getting Next Element
+9/13/2011 4:56:49 @@Element UserPath:
+9/13/2011 4:56:49 @@Entering WriteElement
+9/13/2011 4:56:49 @@Element Data Empty...Exiting
+9/13/2011 4:56:49 @@Getting Next Element
+9/13/2011 4:56:49 @@Element DeviceModelName:HP LaserJet M5035 MFP
+9/13/2011 4:56:49 @@Entering WriteElement
+9/13/2011 4:56:49 @@Opening xml data file
+9/13/2011 4:56:49 @@Adding child element
+9/13/2011 4:56:49 @@Saving XML file...@@Successful
+9/13/2011 4:56:49 @@Getting Next Element
+9/13/2011 4:56:49 @@Element PortName:HPDIU_192.168.0.3
+9/13/2011 4:56:49 @@Entering WriteElement
+9/13/2011 4:56:49 @@Opening xml data file
